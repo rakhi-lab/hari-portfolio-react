@@ -42,10 +42,10 @@ export default function Footer(props) {
               key={i}
               href={media.link}
               className="pf-footer__icon"
-              target="_blank"
+              target={media.link.startsWith("mailto:") ? "_self" : "_blank"}
               rel="noopener noreferrer"
               aria-label={media.name}
-              style={{ "--brand": media.backgroundColor }}
+              style={{ "--brand": media.backgroundColor || "#6366F1" }}
               whileHover={{ scale: 1.15, y: -3 }}
               whileTap={{ scale: 0.9 }}
             >

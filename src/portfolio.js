@@ -58,15 +58,6 @@ const aboutMe = {
 };
 
 const socialMediaLinks = [
-  /* Your Social Media Link */
-  // github: "#",
-  // linkedin: "https://www.linkedin.com/in/hari-shankar-maliya-402336353//in/ashutosh-hathidara-88710b138/",
-  // gmail: "ashutoshhathidara98@gmail.com",
-  // gitlab: "https://gitlab.com/ashutoshhathidara98",
-  // facebook: "https://www.facebook.com/laymanbrother.19/",
-  // twitter: "https://twitter.com/ashutosh_1919",
-  // instagram: "https://www.instagram.com/PHP/WORDPRESS DEVLOPER/"
-
   {
     name: "Github",
     link: "#",
@@ -75,7 +66,7 @@ const socialMediaLinks = [
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/hari-shankar-maliya-402336353//in/ashutosh1919/",
+    link: "https://www.linkedin.com/in/hari-shankar-maliya-402336353/",
     fontAwesomeIcon: "fa-linkedin-in",
     backgroundColor: "#0077B5",
   },
@@ -93,8 +84,9 @@ const socialMediaLinks = [
   },
   {
     name: "X-Twitter",
-    link: "#",
+    link: "https://x.com/software86221",
     fontAwesomeIcon: "fa-x-twitter",
+    backgroundColor: "#000000",
   },
   {
     name: "Facebook",
@@ -104,7 +96,7 @@ const socialMediaLinks = [
   },
   {
     name: "Instagram",
-    link: "#",
+    link: "https://www.instagram.com/harimaliya/",
     fontAwesomeIcon: "fa-instagram",
     backgroundColor: "#E4405F",
   },
