@@ -13,10 +13,10 @@ const navLinks = [
   {
     label: "Products sites",
     dropdown: [
-      { label: "Weblizar", url: "https://weblizar.com" },
-      { label: "WebCart", url: "http://web-cart.com" },
-      { label: "theschool Management", url: "http://theschool-management.com/" },
-      { label: "Online Exam Management", url: "http://onlineexammanagement.com/" },
+      { label: "Weblizar", url: "https://weblizar.com/" },
+      { label: "Web Cart", url: "https://web-cart.com/" },
+      { label: "School Management", url: "https://theschool-management.com/" },
+      { label: "Online Exam Management", url: "https://onlineexammanagement.com/" },
     ],
   },
   { to: "/home#services", hash: "services", label: "Services" },

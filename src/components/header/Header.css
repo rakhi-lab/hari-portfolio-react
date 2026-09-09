@@ -146,7 +146,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 220px;
+  min-width: 240px;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -157,6 +157,15 @@
   display: none;
   z-index: 1100;
   margin-top: 4px;
+}
+
+.pf-nav__dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
 }
 
 .pf-nav__dropdown-wrap:hover .pf-nav__dropdown-menu {
