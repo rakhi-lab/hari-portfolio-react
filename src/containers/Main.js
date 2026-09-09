@@ -6,6 +6,7 @@ import Education from "../pages/education/EducationComponent";
 import Contact from "../pages/contact/ContactComponent";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 export default class Main extends Component {
   componentDidMount() {
@@ -29,6 +30,7 @@ export default class Main extends Component {
   render() {
     return (
       <BrowserRouter basename="/">
+        <ScrollToTop />
         <Switch>
           <Route
             path="/"
