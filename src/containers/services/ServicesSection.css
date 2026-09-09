@@ -1,0 +1,99 @@
+/* ============================================================
+   SERVICES SECTION STYLES
+   ============================================================ */
+
+.services-section-wrap {
+  width: 100%;
+  padding: 80px 0 70px 0;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.services-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* 4-Column Grid */
+.services-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 45px;
+}
+
+/* Individual Card */
+.service-box-item {
+  text-align: center;
+  padding: 40px 24px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 230px;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+.service-box-item:hover {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14) !important;
+}
+
+/* Icon */
+.service-box-icon {
+  font-size: 72px;
+  line-height: 1;
+  margin-bottom: 22px;
+  color: #3498db;
+  transition: transform 0.35s ease-in-out;
+}
+
+.service-box-item:hover .service-box-icon {
+  transform: scale(1.1);
+}
+
+/* Title / Description */
+.service-box-title {
+  font-family: var(--font-sans, "Google Sans Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0 8px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .services-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .service-box-icon {
+    font-size: 64px;
+  }
+  .service-box-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .service-box-item {
+    padding: 32px 20px;
+  }
+  .service-box-icon {
+    font-size: 56px;
+    margin-bottom: 16px;
+  }
+  .service-box-title {
+    font-size: 17px;
+  }
+}

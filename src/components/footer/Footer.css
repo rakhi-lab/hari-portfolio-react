@@ -1,0 +1,124 @@
+/* ============================================================
+   PREMIUM FOOTER
+   ============================================================ */
+
+.pf-footer {
+  background: #0F172A;
+  color: #94A3B8;
+  position: relative;
+  margin-top: 60px;
+}
+
+.pf-footer__border {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6366f1, #8b5cf6, #0ea5e9, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.pf-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+/* ── Brand ── */
+.pf-footer__brand {
+  text-align: center;
+}
+
+.pf-footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.pf-footer__logo-bracket {
+  color: #475569;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 18px;
+}
+
+.pf-footer__logo-name {
+  color: #6366F1;
+  margin: 0 4px;
+}
+
+.pf-footer__tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #475569;
+  margin: 0;
+}
+
+/* ── Social Icons ── */
+.pf-footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pf-footer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94A3B8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+}
+
+.pf-footer__icon:hover {
+  background: var(--brand, #6366f1);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* ── Bottom text ── */
+.pf-footer__bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 24px;
+  width: 100%;
+}
+
+.pf-footer__copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #64748B;
+  margin: 0 0 4px 0;
+}
+
+.pf-footer__sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #334155;
+  margin: 0;
+}
+
+/* Legacy */
+.footer-div {
+  margin-top: 2rem;
+}
+.footer-text {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}

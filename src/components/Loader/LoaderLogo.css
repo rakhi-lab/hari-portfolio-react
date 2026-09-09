@@ -1,0 +1,131 @@
+/* ========================================================
+   Signature Hexagon Preloader
+   ======================================================== */
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.raw_logo {
+  width: 90%;
+  max-width: 480px;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 0 16px rgba(166, 225, 250, 0.35));
+}
+
+/* Outer & Inner Hexagon Stroke Draw Animation */
+.myHexagon {
+  stroke-dasharray: 620;
+  stroke-dashoffset: 620;
+  animation: drawHexagon 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.outerHexagon {
+  animation-delay: 0.1s;
+}
+
+.innerHexagon {
+  animation-delay: 0.35s;
+}
+
+@keyframes drawHexagon {
+  0% {
+    stroke-dashoffset: 620;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* Collegiate Monogram Initials (HS) */
+.logo-initials {
+  font-family: "Cinzel", "Times New Roman", "Georgia", "Montserrat", serif;
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  animation: drawInitials 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.logo-initials-shadow {
+  font-family: "Cinzel", "Times New Roman", "Georgia", "Montserrat", serif;
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  opacity: 0;
+  animation: fadeInShadow 0.8s ease 1.2s forwards;
+}
+
+@keyframes drawInitials {
+  0% {
+    stroke-dashoffset: 380;
+    fill: transparent;
+    opacity: 0;
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(237, 249, 254, 0.12);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInShadow {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Signature in Agustina Regular */
+.logo-signature {
+  font-family: "Agustina Regular", "Agustina", cursive, sans-serif;
+  font-size: 46px;
+  letter-spacing: 1.5px;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  fill: transparent;
+  animation: drawSignature 2.2s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+@keyframes drawSignature {
+  0% {
+    stroke-dashoffset: 600;
+    fill: transparent;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  75% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: #edf9fe;
+    opacity: 1;
+  }
+}

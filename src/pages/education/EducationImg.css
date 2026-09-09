@@ -1,0 +1,97 @@
+/* ========================================================
+   ANIMATED CIRCUIT CHIP (EDUCATION VISUAL)
+   From Uiverse.io by Vosoone (Adapted for Theme & React)
+   ======================================================== */
+
+.edu-chip-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.edu-chip-loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edu-chip-svg {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  overflow: visible;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.08));
+}
+
+.trace-bg {
+  stroke: #475569;
+  stroke-width: 1.8;
+  fill: none;
+  opacity: 0.45;
+}
+
+.trace-flow {
+  stroke-width: 2.2;
+  fill: none;
+  stroke-dasharray: 40 400;
+  stroke-dashoffset: 438;
+  filter: drop-shadow(0 0 6px currentColor);
+  animation: flow 3s cubic-bezier(0.5, 0, 0.9, 1) infinite;
+}
+
+.yellow {
+  stroke: #ffea00;
+  color: #ffea00;
+}
+.blue {
+  stroke: #00ccff;
+  color: #00ccff;
+}
+.green {
+  stroke: #00ff15;
+  color: #00ff15;
+}
+.purple {
+  stroke: #a855f7;
+  color: #a855f7;
+}
+.red {
+  stroke: #ff3300;
+  color: #ff3300;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Chip body */
+.chip-body {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+}
+
+/* Pins */
+.chip-pin {
+  stroke: #444;
+  stroke-width: 0.5;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+}
+
+/* Text inside the chip - STICTLY PRESERVING THE THEME FONT FAMILY */
+.chip-text {
+  font-family: var(--font-sans, "Google Sans Medium", "Montserrat", sans-serif);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.trace-node {
+  fill: #1e293b;
+  transition: transform 0.3s ease;
+}

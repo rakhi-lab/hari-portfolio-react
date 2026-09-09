@@ -1,0 +1,613 @@
+/* ============================================================
+   PREMIUM SKILLS SECTION
+   ============================================================ */
+
+/* Section wrapper */
+.skills-main-div {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.skills-main-div:last-child {
+  border-bottom: none;
+}
+
+/* SVG illustration pane */
+.skills-image-div {
+  flex: 0 0 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-image-div > * {
+  max-width: 100%;
+  height: auto;
+  max-height: 320px;
+}
+
+/* Professional photo in skills section */
+.skills-profile-photo {
+  width: 100%;
+  max-width: 380px;
+  max-height: 460px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow:
+    0 20px 60px rgba(99, 102, 241, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 4px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Text pane */
+.skills-text-div {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Section header */
+.skills-header-div {
+  text-align: center;
+  padding: 60px 0 20px;
+}
+
+.skills-header {
+  font-family: var(--font-sans, "Google Sans Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #0F172A;
+  margin: 0;
+}
+
+/* Skill row heading */
+.skills-heading {
+  font-family: var(--font-sans, "Google Sans Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: #0F172A;
+  margin: 0 0 16px 0;
+}
+
+/* Skills Content Container */
+.skills-points-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.skills-intro-subtitle {
+  font-family: var(--font-sans, "Google Sans Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.01em;
+}
+
+/* Modern Capability Point Cards */
+.skill-point-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 13px 18px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 14px;
+  box-shadow: 
+    0 2px 8px -2px rgba(15, 23, 42, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-point-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3.5px;
+  background: linear-gradient(180deg, #6366f1, #0ea5e9);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border-radius: 3px 0 0 3px;
+}
+
+.skill-point-card:hover {
+  background: #ffffff;
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 
+    0 10px 24px -4px rgba(99, 102, 241, 0.12),
+    0 3px 8px -2px rgba(0, 0, 0, 0.04);
+}
+
+.skill-point-card:hover::before {
+  opacity: 1;
+}
+
+/* Glowing Icon Badge */
+.skill-point-icon-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(14, 165, 233, 0.12));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #4f46e5;
+  transition: all 0.25s ease;
+}
+
+.skill-point-card:hover .skill-point-icon-badge {
+  background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+  color: #ffffff;
+  border-color: transparent;
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.skill-point-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Card Text */
+.skill-point-text {
+  font-family: var(--font-sans, "Google Sans Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+  margin: 0;
+  flex: 1;
+}
+
+/* Skill bullets (legacy fallback) */
+.skills-text {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Progress Bars */
+.skill-progress-wrap {
+  margin-bottom: 20px;
+}
+
+.skill-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-progress-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.skill-progress-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6366F1;
+}
+
+.skill-progress-track {
+  height: 8px;
+  background: #EEF2FF;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  border-radius: 9999px;
+  position: relative;
+}
+
+.skill-progress-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 9999px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .skills-image-div {
+    flex: 0 0 280px;
+  }
+}
+
+@media (max-width: 800px) {
+  .skills-main-div {
+    flex-direction: column !important;
+    gap: 32px;
+    padding: 40px 0;
+  }
+
+  .skills-image-div {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .skills-heading {
+    text-align: center;
+  }
+
+  .skills-points-container {
+    gap: 10px;
+  }
+
+  .skill-point-card {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .skill-point-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-header { font-size: 30px; }
+}
+
+/* ============================================================
+   MY SKILLS SHOWCASE SECTION (TARGET DESIGN)
+   ============================================================ */
+.skills-main-wrapper {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  box-sizing: border-box;
+}
+
+.my-skills-wrapper {
+  width: 100%;
+  padding: 20px 0 60px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.my-skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  width: 100%;
+}
+
+/* Left Column: Showcase Art */
+.my-skills-showcase-pane {
+  flex: 0 0 46%;
+  max-width: 485px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.my-skills-art-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.my-skills-showcase-img {
+  width: 100%;
+  height: auto;
+  max-width: 485px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(29, 114, 254, 0.08));
+  border-radius: 20px;
+  user-select: none;
+}
+
+/* Right Column: Skills Content */
+.my-skills-content-pane {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  padding-right: 8px;
+}
+
+/* Top Right Decorative Accent (Ideas / Code / Solutions) */
+.my-skills-corner-accent {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.corner-dots {
+  display: grid;
+  grid-template-columns: repeat(3, 5px);
+  gap: 7px;
+  margin-bottom: 6px;
+}
+
+.corner-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #93c5fd;
+}
+
+.corner-cursive-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Caveat', 'Dancing Script', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 19px;
+  line-height: 1.15;
+  color: #64748b;
+  transform: rotate(5deg);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Overline */
+.my-skills-overline {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-sans, "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.my-skills-overline::before,
+.my-skills-overline::after {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 1.5px;
+  background-color: #94a3b8;
+}
+
+/* Title */
+.my-skills-title {
+  font-family: var(--font-sans, "Google Sans Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(38px, 4.2vw, 54px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: #0F172A;
+  margin: 0 0 14px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.my-skills-title-highlight {
+  position: relative;
+  color: #1D72FE;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.my-skills-swoosh {
+  position: absolute;
+  bottom: -8px;
+  left: -2%;
+  width: 104%;
+  height: 16px;
+  pointer-events: none;
+}
+
+/* Subtitle */
+.my-skills-subtitle {
+  font-family: var(--font-sans, "Google Sans Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #475569;
+  max-width: 540px;
+  margin: 0 0 28px 0;
+}
+
+/* 7 Tech Badges Row */
+.my-skills-cards-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.my-skill-tech-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 6px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow:
+    0 4px 16px -2px rgba(15, 23, 42, 0.05),
+    0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  min-height: 78px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.my-skill-tech-card:hover {
+  border-color: rgba(29, 114, 254, 0.4);
+  box-shadow: 0 12px 26px -4px rgba(29, 114, 254, 0.18);
+  transform: translateY(-5px);
+}
+
+.my-skill-card-icon {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.my-skill-card-name {
+  font-family: var(--font-sans, "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Subheading Tagline */
+.my-skills-subheading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans, "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+  margin: 0 0 20px 0;
+}
+
+.my-skills-subheading .bolt-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* 6 Animated Progress Bars */
+.my-skills-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.my-skill-progress-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.my-skill-icon-pill {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.my-skill-name-label {
+  font-family: var(--font-sans, "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1e293b;
+  width: 148px;
+  flex-shrink: 0;
+}
+
+.my-skill-bar-track {
+  flex: 1;
+  height: 11px;
+  background: #eef2f6;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 16px;
+}
+
+.my-skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1d72fe 0%, #38bdf8 100%);
+  border-radius: 999px;
+}
+
+.my-skill-pct-label {
+  font-family: var(--font-sans, "Google Sans Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  min-width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .my-skills-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .my-skills-showcase-pane {
+    max-width: 100%;
+  }
+  .my-skills-corner-accent {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-skills-cards-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .my-skills-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .my-skill-name-label {
+    width: 105px;
+    font-size: 13px;
+  }
+  .my-skill-bar-track {
+    margin: 0 10px;
+  }
+  .my-skills-title {
+    font-size: 32px;
+  }
+}
+

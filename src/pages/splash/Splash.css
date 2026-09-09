@@ -1,0 +1,16 @@
+/* ============================================================
+   ASHUTOSH-STYLE FULLSCREEN SPLASH PRELOADER
+   ============================================================ */
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #001C55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  overflow: hidden;
+}
