@@ -174,9 +174,9 @@ const skills = {
       fileName: "FullStackImg",
       imagePath: "hari-fullstack.png",
       skills: [
-        "Building responsive website front end using React-Redux",
-        "Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "Creating application backend in Node, Express & Flask",
+        "Building responsive website front end using HTML5, CSS3, Bootstrap & JavaScript",
+        "Developing mobile applications using Flutter",
+        "Creating application backend in PHP, Laravel & WordPress",
       ],
       softwareSkills: [
         {
@@ -201,6 +201,13 @@ const skills = {
           },
         },
         {
+          skillName: "Bootstrap",
+          fontAwesomeClassname: "simple-icons:bootstrap",
+          style: {
+            color: "#7952B3",
+          },
+        },
+        {
           skillName: "JavaScript",
           fontAwesomeClassname: "simple-icons:javascript",
           style: {
@@ -209,45 +216,31 @@ const skills = {
           },
         },
         {
-          skillName: "ReactJS",
-          fontAwesomeClassname: "simple-icons:react",
-          style: {
-            color: "#61DAFB",
-          },
-        },
-        {
-          skillName: "NodeJS",
-          fontAwesomeClassname: "devicon-plain:nodejs-wordmark",
-          style: {
-            color: "#339933",
-          },
-        },
-        {
-          skillName: "NPM",
-          fontAwesomeClassname: "simple-icons:npm",
-          style: {
-            color: "#CB3837",
-          },
-        },
-        {
-          skillName: "Yarn",
-          fontAwesomeClassname: "simple-icons:yarn",
-          style: {
-            color: "#2C8EBB",
-          },
-        },
-        {
-          skillName: "Gatsby",
-          fontAwesomeClassname: "simple-icons:gatsby",
-          style: {
-            color: "#663399",
-          },
-        },
-        {
           skillName: "Flutter",
           fontAwesomeClassname: "simple-icons:flutter",
           style: {
             color: "#02569B",
+          },
+        },
+        {
+          skillName: "PHP",
+          fontAwesomeClassname: "simple-icons:php",
+          style: {
+            color: "#777BB4",
+          },
+        },
+        {
+          skillName: "Laravel",
+          fontAwesomeClassname: "simple-icons:laravel",
+          style: {
+            color: "#FF2D20",
+          },
+        },
+        {
+          skillName: "WordPress",
+          fontAwesomeClassname: "simple-icons:wordpress",
+          style: {
+            color: "#21759B",
           },
         },
       ],
@@ -534,7 +527,7 @@ const contactPageData = {
     title: "Blogs",
     subtitle:
       "I like to document some of my experiences in professional career journey as well as some technical knowledge sharing.",
-    link: "https://blogs.ashutoshhathidara.com/",
+    link: "https://blogs.harishanker.com/",
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {

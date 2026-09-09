@@ -9,8 +9,13 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "./assets/font-awesome/css/all.css";
+import SmoothScroll from "./shared/SmoothScroll";
 
 const engine = new Styletron();
+
+// Initialize momentum smooth scroll (desktop only)
+const smoothScroll = new SmoothScroll({ ease: 0.09, multiplier: 1 });
+smoothScroll.init();
 
 ReactDOM.render(
   <StyletronProvider value={engine}>
