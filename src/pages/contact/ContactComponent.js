@@ -15,6 +15,7 @@ const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
 const addressSection = contactPageData.addressSection;
 const phoneSection = contactPageData.phoneSection;
+const emailSection = contactPageData.emailSection;
 
 class Contact extends Component {
   render() {
@@ -122,6 +123,33 @@ class Contact extends Component {
                     theme={theme}
                   />
                 </div>
+                {emailSection && (
+                  <div className="contact-email-div" style={{ marginTop: "20px" }}>
+                    <a
+                      href={emailSection.link}
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "10px",
+                        padding: "12px 24px",
+                        background: "linear-gradient(135deg, #6366F1, #8b5cf6)",
+                        color: "#fff",
+                        borderRadius: "10px",
+                        textDecoration: "none",
+                        fontFamily: "'Inter', sans-serif",
+                        fontWeight: 600,
+                        fontSize: "15px",
+                        boxShadow: "0 4px 14px rgba(99,102,241,0.35)",
+                        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                      }}
+                      onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 20px rgba(99,102,241,0.45)"; }}
+                      onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 14px rgba(99,102,241,0.35)"; }}
+                    >
+                      <i className="fas fa-envelope" style={{ fontSize: "16px" }} />
+                      {emailSection.subtitle}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </Fade>
