@@ -279,7 +279,7 @@ const skills = {
         },
         {
           skillName: "SQL",
-          fontAwesomeClassname: "fas fa-database",
+          fontAwesomeClassname: "mdi:database",
           style: {
             color: "#336791",
           },
