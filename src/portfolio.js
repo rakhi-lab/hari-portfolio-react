@@ -536,7 +536,7 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "animated_hari.png",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, React, Android, Cloud and Opensource Development.",
+      "I’m available on almost all major social media platforms. Feel free to reach out to me anytime, and I’ll get back to you within 24 hours. I can help you with WordPress, Laravel, Android Development, Cloud Solutions, and Open Source Development.",
   },
   blogSection: {
     title: "Blogs",
