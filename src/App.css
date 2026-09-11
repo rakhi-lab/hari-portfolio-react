@@ -2,31 +2,6 @@
    APP GLOBAL STYLES
    ============================================================ */
 
-/* ── Scroll performance ─────────────────────────────────────── */
-html {
-  scroll-behavior: smooth;
-  /* Tells the browser to keep scroll handling on the GPU thread */
-  overflow-y: scroll;
-}
-
-body {
-  /* Prevent overscroll bounce that can cause jank */
-  overscroll-behavior-y: none;
-  /* Hint to browser: we will transform/animate body subtrees */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* GPU-promote elements that animate on scroll */
-[data-aos],
-.react-reveal,
-.fade_down,
-.fade_up {
-  will-change: transform, opacity;
-}
-
-/* ─────────────────────────────────────────────────────────── */
-
 /* Remove default CRA boilerplate */
 .App {
   background-color: var(--color-bg, #FAFBFF);
