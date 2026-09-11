@@ -433,9 +433,9 @@ const degrees = {
       alt_name: "University of Kota",
       duration: "JULY 2017 - JUNE 2019",
       descriptions: [
-        "⚡ Master of Business Administration with specialization in Marketing & Human Resource Management.",
-        "⚡ Studied strategic management, consumer marketing, organizational dynamics, and corporate leadership.",
-        "⚡ Applied analytical problem-solving and cross-functional leadership principles for scalable business operations.",
+        "Master of Business Administration with specialization in Marketing & Human Resource Management.",
+        "Studied strategic management, consumer marketing, organizational dynamics, and corporate leadership.",
+        "Applied analytical problem-solving and cross-functional leadership principles for scalable business operations.",
       ],
       website_link: "https://www.uok.ac.in",
     },
@@ -446,8 +446,8 @@ const degrees = {
       alt_name: "L-BITS College Kota",
       duration: "JULY 2007 - MAY 2010",
       descriptions: [
-        "⚡ Studied core computer science & information technology subjects including Software Engineering, DBMS, Computer Networks, and Web Technologies.",
-        "⚡ Hands-on application architecture, database administration, and modern software development practices.",
+        "Studied core computer science & information technology subjects including Software Engineering, DBMS, Computer Networks, and Web Technologies.",
+        "Hands-on application architecture, database administration, and modern software development practices.",
       ],
       website_link: "",
     },
@@ -458,7 +458,7 @@ const degrees = {
       alt_name: "LBS School Kota, Rajasthan",
       duration: "JULY 2006 - JUNE 2007",
       descriptions: [
-        "⚡ Completed Senior Secondary School Examination (Class XII) with focused foundation in Science and Mathematics.",
+        "Completed Senior Secondary School Examination (Class XII) with focused foundation in Science and Mathematics.",
       ],
       website_link: "",
     },
@@ -469,7 +469,7 @@ const degrees = {
       alt_name: "Adarsh School Kota, Rajasthan",
       duration: "JULY 2004 - JUNE 2005",
       descriptions: [
-        "⚡ Completed Secondary School Examination (Class X) with strong academic standing across all foundational disciplines.",
+        "Completed Secondary School Examination (Class X) with strong academic standing across all foundational disciplines.",
       ],
       website_link: "",
     },
