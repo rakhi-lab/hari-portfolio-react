@@ -253,6 +253,7 @@ const skills = {
         "Hosting and maintaining websites on virtual machine instances along with integration of databases",
         "Deploying deep learning models on cloud to use on mobile devices",
         "Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+        "Managing web hosting, domains, and server configurations using cPanel and GoDaddy",
       ],
       softwareSkills: [
         {
@@ -309,6 +310,20 @@ const skills = {
           fontAwesomeClassname: "simple-icons:kubernetes",
           style: {
             color: "#326CE5",
+          },
+        },
+        {
+          skillName: "cPanel",
+          fontAwesomeClassname: "simple-icons:cpanel",
+          style: {
+            color: "#FF6C2C",
+          },
+        },
+        {
+          skillName: "GoDaddy",
+          fontAwesomeClassname: "simple-icons:godaddy",
+          style: {
+            color: "#1BDBDB",
           },
         },
       ],
