@@ -252,17 +252,10 @@ const skills = {
         "Experience working on multiple cloud platforms",
         "Hosting and maintaining websites on virtual machine instances along with integration of databases",
         "Deploying deep learning models on cloud to use on mobile devices",
-        "Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+        "Setting up streaming jobs from DB to Server or vice-versa on AWS",
         "Managing web hosting, domains, and server configurations using cPanel and GoDaddy",
       ],
       softwareSkills: [
-        {
-          skillName: "GCP",
-          fontAwesomeClassname: "simple-icons:googlecloud",
-          style: {
-            color: "#4285F4",
-          },
-        },
         {
           skillName: "AWS",
           fontAwesomeClassname: "simple-icons:amazonaws",
@@ -285,10 +278,17 @@ const skills = {
           },
         },
         {
-          skillName: "PostgreSQL",
-          fontAwesomeClassname: "simple-icons:postgresql",
+          skillName: "SQL",
+          fontAwesomeClassname: "fas fa-database",
           style: {
             color: "#336791",
+          },
+        },
+        {
+          skillName: "MySQL",
+          fontAwesomeClassname: "simple-icons:mysql",
+          style: {
+            color: "#4479A1",
           },
         },
         {
