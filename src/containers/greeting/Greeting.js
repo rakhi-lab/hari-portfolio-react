@@ -33,28 +33,6 @@ const imageVariants = {
   },
 };
 
-/* ─── Floating Badge ──────────────────────────────────────── */
-function FloatingBadge({ children, style, delay = 0 }) {
-  return (
-    <motion.div
-      className="hero-badge"
-      style={style}
-      initial={{ opacity: 0, scale: 0.6, y: 10 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{
-        delay: 1.4 + delay,
-        duration: 0.55,
-        type: "spring",
-        stiffness: 220,
-        damping: 16,
-      }}
-      whileHover={{ scale: 1.07, y: -2 }}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
 /* ─── Main Component ──────────────────────────────────────── */
 export default function Greeting(props) {
   return (

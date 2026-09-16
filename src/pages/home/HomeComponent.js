@@ -10,6 +10,7 @@ import PortfolioSection from "../../containers/portfolio/PortfolioSection";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 
+
 class Home extends Component {
   componentDidMount() {
     if (window.location.hash) {
@@ -36,6 +37,8 @@ class Home extends Component {
         <EducationSection theme={this.props.theme} />
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
+    
+
       </div>
     );
   }
