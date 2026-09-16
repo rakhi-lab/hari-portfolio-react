@@ -8,6 +8,7 @@ import FullStackImg from "./FullStackImg";
 import CloudInfraImg from "./CloudInfraImg";
 import DesignImg from "./DesignImg";
 import MySkillsSection from "./MySkillsSection";
+import SectionHeader from "../../components/sectionHeader/SectionHeader";
 
 function GetSkillSvg({ fileName, theme }) {
   if (fileName === "DataScienceImg") return <DataScienceImg theme={theme} />;
@@ -101,15 +102,21 @@ function SkillRow({ skill, theme, index }) {
 
       {/* Text & Skills */}
       <div className="skills-text-div">
-        <motion.h1
-          className="skills-heading"
-          style={{ color: theme.text }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          {skill.title}
-        </motion.h1>
+        <div style={{ marginBottom: "16px" }}>
+          {(() => {
+            const words = skill.title.split(" ");
+            const highlight = words.length > 1 ? words.pop() : skill.title;
+            const title = words.length > 0 ? words.join(" ") : "";
+            return (
+              <SectionHeader
+                title={title}
+                highlight={highlight}
+                align="left"
+                theme={theme}
+              />
+            );
+          })()}
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -181,9 +188,13 @@ function SkillRow({ skill, theme, index }) {
                     <svg
                       viewBox="0 0 24 24"
                       className="skill-point-icon"
-                      fill="currentColor"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <path d="M13 2L3 14h8l-1 8 11-12h-8l1-8z" />
+                      <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
                   <p

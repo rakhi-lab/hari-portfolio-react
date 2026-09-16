@@ -42,13 +42,13 @@ class Contact extends Component {
                   theme={theme}
                 />
                 <SocialMedia theme={theme} />
-                <div className="resume-btn-div">
+                {/* <div className="resume-btn-div">
                   <Button
                     text="Portfolio"
                     href="/home#Portfolio"
                     theme={theme}
                   />
-                </div>
+                </div> */}
               </div>
             </div>
           </Fade>
@@ -82,15 +82,20 @@ class Contact extends Component {
             </div>
           </Fade>
           <Fade bottom duration={1000} distance="40px">
-            <div className="address-heading-div">
-              <div className="contact-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${addressSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
-                <AddressImg theme={theme} />
+            <div className="address-heading-div premium-address-section">
+              <div className="premium-map-container">
+                <iframe
+                  src={addressSection.location_map_link}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, filter: theme.name === "dark" ? "invert(90%) hue-rotate(180deg)" : "none" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Office Location"
+                ></iframe>
               </div>
-              <div className="address-heading-text-div">
+              <div className="address-heading-text-div premium-address-text">
                 <SectionHeader
                   overline="LOCATION"
                   title="Office"
@@ -99,57 +104,36 @@ class Contact extends Component {
                   align="left"
                   theme={theme}
                 />
-                {phoneSection["title"] ? (
-                  <>
-                    <h1
-                      className="address-heading-text"
-                      style={{ color: theme.text }}
-                    >
-                      {phoneSection["title"]}
-                    </h1>
-                    <p
-                      className="contact-header-detail-text subTitle"
-                      style={{ color: theme.secondaryText }}
-                    >
-                      {phoneSection["subtitle"]}
-                    </p>
-                  </>
-                ) : null}
-                <div className="address-btn-div">
-                  <Button
-                    text="Visit on Google Maps"
-                    newTab={true}
-                    href={addressSection.location_map_link}
-                    theme={theme}
-                  />
-                </div>
-                {emailSection && (
-                  <div className="contact-email-div" style={{ marginTop: "20px" }}>
+
+                <div className="premium-contact-cards">
+                  <a
+                    href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(addressSection.subtitle)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="premium-contact-card map-card"
+                    style={{ background: theme.name === "dark" ? "#1e2125" : "#ffffff", borderColor: theme.name === "dark" ? "#2d3136" : "rgba(226, 232, 240, 0.8)" }}
+                  >
+                    <div className="card-icon"><i className="fas fa-map-marker-alt"></i></div>
+                    <div className="card-content">
+                      <h4 style={{ color: theme.text }}>Get Directions</h4>
+                      <p style={{ color: theme.secondaryText }}>View on Google Maps</p>
+                    </div>
+                  </a>
+
+                  {emailSection && (
                     <a
                       href={emailSection.link}
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "10px",
-                        padding: "12px 24px",
-                        background: "linear-gradient(135deg, #6366F1, #8b5cf6)",
-                        color: "#fff",
-                        borderRadius: "10px",
-                        textDecoration: "none",
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 600,
-                        fontSize: "15px",
-                        boxShadow: "0 4px 14px rgba(99,102,241,0.35)",
-                        transition: "transform 0.2s ease, box-shadow 0.2s ease",
-                      }}
-                      onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 20px rgba(99,102,241,0.45)"; }}
-                      onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 14px rgba(99,102,241,0.35)"; }}
+                      className="premium-contact-card email-card"
+                      style={{ background: theme.name === "dark" ? "#1e2125" : "#ffffff", borderColor: theme.name === "dark" ? "#2d3136" : "rgba(226, 232, 240, 0.8)" }}
                     >
-                      <i className="fas fa-envelope" style={{ fontSize: "16px" }} />
-                      {emailSection.subtitle}
+                      <div className="card-icon"><i className="fas fa-envelope"></i></div>
+                      <div className="card-content">
+                        <h4 style={{ color: theme.text }}>Email Us</h4>
+                        <p style={{ color: theme.secondaryText }}>{emailSection.subtitle}</p>
+                      </div>
                     </a>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           </Fade>

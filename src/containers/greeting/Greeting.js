@@ -142,30 +142,7 @@ export default function Greeting(props) {
             transition={{ type: "spring", stiffness: 180, damping: 16 }}
           />
 
-          {/* Floating stat badges */}
-          <FloatingBadge delay={0} style={{ top: "10%", left: "-28px" }}>
-            <span className="badge__dot badge__dot--green" />
-            <div>
-              <div className="badge__value">13+</div>
-              <div className="badge__label">Years Exp.</div>
-            </div>
-          </FloatingBadge>
 
-          <FloatingBadge delay={0.18} style={{ bottom: "14%", right: "-30px" }}>
-            <span className="badge__icon">{"</>"}</span>
-            <div>
-              <div className="badge__value">150+</div>
-              <div className="badge__label">Projects</div>
-            </div>
-          </FloatingBadge>
-
-          <FloatingBadge delay={0.32} style={{ top: "55%", left: "-32px" }}>
-            <span className="badge__dot badge__dot--blue" />
-            <div>
-              <div className="badge__value">100+</div>
-              <div className="badge__label">Clients</div>
-            </div>
-          </FloatingBadge>
         </motion.div>
       </div>
 

@@ -21,11 +21,11 @@ const seo = {
 const greeting = {
   title: "Hari Shankar Maliya",
   logo_name: "Hari Shankar",
-  nickname: "PHP/WORDPRESS DEVELOPER",
+  nickname: "CEO & FOUNDER",
   roles: [
-    "PHP / WORDPRESS DEVELOPER",
-    "LARAVEL / YII / CI DEVELOPER",
-    "HTML5 / CSS3 / JAVASCRIPT / JQUERY DESIGNER"
+    "CEO & FOUNDER",
+    "BUSINESS STRATEGIST",
+    "TECH VISIONARY"
   ],
   subTitle:
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
@@ -50,7 +50,7 @@ const aboutMe = {
     { name: "WEBSITE", value: "https://www.harimaliya.com/", icon: "fas fa-globe" },
   ],
   stats: [
-    { name: "Years Experience", value: "13+", icon: "fas fa-briefcase", color: "#1877F2" },
+    { name: "Years Experience", value: "16+", icon: "fas fa-briefcase", color: "#1877F2" },
     { name: "Happy Clients", value: "100+", icon: "fas fa-users", color: "#00A95F" },
     { name: "Projects Completed", value: "150+", icon: "fas fa-clipboard-list", color: "#F7931E" },
     { name: "Plugins & Themes", value: "100+", icon: "fas fa-trophy", color: "#9D50BB" },
@@ -108,13 +108,13 @@ const skills = {
       title: "My Skills",
       fileName: "FullStackImg",
       skills: [
-        "Skills you can rely on for your next projects.",
-        "PHP - 90%",
-        "WordPress - 85%",
-        "Laravel, CI - 95%",
-        "MySQL - 80%",
-        "HTML5, CSS3 - 90%",
-        "Jquery, JavaScript - 95%"
+        "Leadership",
+        "Strategic Thinking",
+        "Decision-Making",
+        "Financial Management",
+        "Communication",
+        "Team Management",
+        "Sales & Business Development"
       ],
       softwareSkills: [
         {
@@ -246,183 +246,36 @@ const skills = {
       ],
     },
     {
-      title: "Cloud Infra-Architecture",
+      title: "Leadership & Business Expertise",
       fileName: "CloudInfraImg",
+      imagePath: "hari-business.jpg",
       skills: [
-        "Experience working on multiple cloud platforms",
-        "Hosting and maintaining websites on virtual machine instances along with integration of databases",
-        "Deploying deep learning models on cloud to use on mobile devices",
-        "Setting up streaming jobs from DB to Server or vice-versa on AWS",
-        "Managing web hosting, domains, and server configurations using cPanel and GoDaddy",
+        "Business Strategy & Growth",
+        "Product Development & Innovation",
+        "Team Leadership & Management",
+        "Client & Partner Relationships",
+        "Sales & Business Development",
+        "Technology & Digital Transformation",
+        "Business Operations & Execution",
       ],
-      softwareSkills: [
-        {
-          skillName: "AWS",
-          fontAwesomeClassname: "simple-icons:amazonaws",
-          style: {
-            color: "#FF9900",
-          },
-        },
-        {
-          skillName: "Azure",
-          fontAwesomeClassname: "simple-icons:microsoftazure",
-          style: {
-            color: "#0089D6",
-          },
-        },
-        {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
-          style: {
-            color: "#FFCA28",
-          },
-        },
-        {
-          skillName: "SQL",
-          fontAwesomeClassname: "mdi:database",
-          style: {
-            color: "#336791",
-          },
-        },
-        {
-          skillName: "MySQL",
-          fontAwesomeClassname: "simple-icons:mysql",
-          style: {
-            color: "#4479A1",
-          },
-        },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#47A248",
-          },
-        },
-        {
-          skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
-          style: {
-            color: "#1488C6",
-          },
-        },
-        {
-          skillName: "Kubernetes",
-          fontAwesomeClassname: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-          },
-        },
-        {
-          skillName: "cPanel",
-          fontAwesomeClassname: "simple-icons:cpanel",
-          style: {
-            color: "#FF6C2C",
-          },
-        },
-        {
-          skillName: "GoDaddy",
-          fontAwesomeClassname: "simple-icons:godaddy",
-          style: {
-            color: "#1BDBDB",
-          },
-        },
-      ],
+      softwareSkills: [],
     },
     {
-      title: "UI/UX Design",
-      fileName: "DesignImg",
+      title: "Executive Leadership & Vision",
+      imagePath: "designer-illustration.png",
       skills: [
-        "Designing highly attractive user interface for mobile and web applications",
-        "Customizing logo designs and building logos from scratch",
-        "Creating the flow of application functionalities to optimize user experience",
+        "Driving organizational growth and maximizing stakeholder value",
+        "Defining corporate vision, mission, and long-term strategic goals",
+        "Overseeing daily operations and ensuring effective execution of business strategies",
+        "Leading high-performance executive teams and fostering a culture of innovation",
+        "Navigating complex market dynamics and identifying new business opportunities",
       ],
-      softwareSkills: [
-        {
-          skillName: "Adobe XD",
-          fontAwesomeClassname: "simple-icons:adobexd",
-          style: {
-            color: "#FF2BC2",
-          },
-        },
-        {
-          skillName: "Figma",
-          fontAwesomeClassname: "simple-icons:figma",
-          style: {
-            color: "#F24E1E",
-          },
-        },
-        {
-          skillName: "Adobe Illustrator",
-          fontAwesomeClassname: "simple-icons:adobeillustrator",
-          style: {
-            color: "#FF7C00",
-          },
-        },
-        {
-          skillName: "Inkscape",
-          fontAwesomeClassname: "simple-icons:inkscape",
-          style: {
-            color: "#000000",
-          },
-        },
-      ],
+      softwareSkills: [],
     },
   ],
 };
 
 // Education Page
-const competitiveSites = {
-  competitiveSites: [
-    {
-      siteName: "LeetCode",
-      iconifyClassname: "simple-icons:leetcode",
-      style: {
-        color: "#F79F1B",
-      },
-      profileLink: "https://leetcode.com/PHP/WORDPRESS DEVLOPER/",
-    },
-    {
-      siteName: "HackerRank",
-      iconifyClassname: "simple-icons:hackerrank",
-      style: {
-        color: "#2EC866",
-      },
-      profileLink: "https://www.hackerrank.com/PHP/WORDPRESS DEVLOPER",
-    },
-    {
-      siteName: "Codechef",
-      iconifyClassname: "simple-icons:codechef",
-      style: {
-        color: "#5B4638",
-      },
-      profileLink: "https://www.codechef.com/users/ashutosh_1919",
-    },
-    {
-      siteName: "Codeforces",
-      iconifyClassname: "simple-icons:codeforces",
-      style: {
-        color: "#1F8ACB",
-      },
-      profileLink: "http://codeforces.com/profile/PHP/WORDPRESS DEVLOPER",
-    },
-    {
-      siteName: "Hackerearth",
-      iconifyClassname: "simple-icons:hackerearth",
-      style: {
-        color: "#323754",
-      },
-      profileLink: "https://www.hackerearth.com/@ashutosh391",
-    },
-    {
-      siteName: "Kaggle",
-      iconifyClassname: "simple-icons:kaggle",
-      style: {
-        color: "#20BEFF",
-      },
-      profileLink: "https://www.kaggle.com/laymanbrother",
-    },
-  ],
-};
 
 const degrees = {
   degrees: [
@@ -542,19 +395,19 @@ const contactPageData = {
     title: "Blogs",
     subtitle:
       "I like to document some of my experiences in professional career journey as well as some technical knowledge sharing.",
-    link: "https://blogs.harishanker.com/",
+    link: "https://weblizar.com/blog/",
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {
     title: "Address",
-    subtitle: "Saratoga Ave, San Jose, CA, USA 95129",
-    locality: "San Jose",
-    country: "USA",
-    region: "California",
-    postalCode: "95129",
-    streetAddress: "Saratoga Avenue",
+    subtitle: "5, Main Road, Krishna Nagar, Rangbari, Kota, Rajasthan 324005",
+    locality: "Kota",
+    country: "India",
+    region: "Rajasthan",
+    postalCode: "324005",
+    streetAddress: "5, Main Road, Krishna Nagar",
     avatar_image_path: "address_image.svg",
-    location_map_link: "https://maps.app.goo.gl/NvYZqa34Wye4tpS17",
+    location_map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.356982436479!2d75.83842!3d25.1236192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f8534ac294541%3A0x63bbba3373473faf!2sIntechno%20Software%20Private%20Limited!5e0!3m2!1sen!2sin!4v1789557703227!5m2!1sen!2sin",
   },
   phoneSection: {
     title: "",
@@ -573,7 +426,6 @@ export {
   greeting,
   socialMediaLinks,
   skills,
-  competitiveSites,
   degrees,
   certifications,
   experience,
