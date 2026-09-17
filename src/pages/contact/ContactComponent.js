@@ -61,7 +61,7 @@ class Contact extends Component {
                   align="left"
                   theme={theme}
                 />
-                <div className="blogsite-btn-div">
+                <div className="blogs-btn-div">
                   <Button
                     text="Visit My Blogsite"
                     newTab={true}
@@ -107,7 +107,7 @@ class Contact extends Component {
                   <a
                     href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(addressSection.subtitle)}`}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="onopen northerner"
                     className="premium-contact-card map-card"
                     style={{ background: theme.name === "dark" ? "#1e2125" : "#ffffff", borderColor: theme.name === "dark" ? "#2d3136" : "rgba(226, 232, 240, 0.8)" }}
                   >
@@ -119,7 +119,7 @@ class Contact extends Component {
                   </a>
 
                   {emailSection && (
-                    <a
+                      <a
                       href={emailSection.link}
                       className="premium-contact-card email-card"
                       style={{ background: theme.name === "dark" ? "#1e2125" : "#ffffff", borderColor: theme.name === "dark" ? "#2d3136" : "rgba(226, 232, 240, 0.8)" }}

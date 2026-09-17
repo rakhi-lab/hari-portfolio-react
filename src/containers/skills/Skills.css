@@ -21,22 +21,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 380px;
+  height: 460px;
+  overflow: hidden;
+  background: #edf2ff;
 }
 
 .skills-image-div > * {
-  max-width: 100%;
-  height: auto;
-  max-height: 320px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Utility: image side decides which top corner gets the radius */
+.skills-image-div.image-side-left {
+  border-top-left-radius: 0;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.skills-image-div.image-side-right {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* Professional photo in skills section */
 .skills-profile-photo {
   width: 100%;
-  max-width: 380px;
-  max-height: 460px;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  border-radius: 24px;
+  object-position: center top;
+  border-radius: inherit;
   box-shadow:
     0 20px 60px rgba(99, 102, 241, 0.18),
     0 8px 24px rgba(0, 0, 0, 0.08);

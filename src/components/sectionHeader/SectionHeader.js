@@ -29,7 +29,9 @@ export default function SectionHeader({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
-  const textColor = theme ? theme.text : "#0F172A";
+  const textColor = theme ? theme.text || "#1D72FE" : "#1D72FE";
+  const accentColor =
+    highlightColor || (theme ? theme.imageHighlight || theme.text || "#1D72FE" : "#1D72FE");
   const subtitleColor = theme ? theme.secondaryText || "#475569" : "#475569";
 
   return (
@@ -57,7 +59,7 @@ export default function SectionHeader({
           {highlight && (
             <span
               className="section-header-highlight"
-              style={{ color: highlightColor }}
+              style={{ color: accentColor }}
             >
               {highlight}
               <svg
@@ -68,7 +70,7 @@ export default function SectionHeader({
               >
                 <path
                   d="M4 14C45 3 115 3 156 13"
-                  stroke={highlightColor}
+                  stroke={accentColor}
                   strokeWidth="4.5"
                   strokeLinecap="round"
                 />

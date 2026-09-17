@@ -1,0 +1,149 @@
+/* Premium Tech Stack Section */
+.tech-stack-main {
+  width: 100%;
+  padding: 60px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden; /* Prevent horizontal scrollbar on body */
+}
+
+.tech-stack-header-div {
+  margin-bottom: 50px;
+}
+
+.tech-stack-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.tech-stack-heading {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.tech-stack-subtitle {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Scroller Container */
+.tech-stack-scroller-div {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Optional fading edges for the scroller */
+.tech-stack-scroller-div::before,
+.tech-stack-scroller-div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.tech-stack-scroller-div::before {
+  left: 0;
+  background: linear-gradient(to right, var(--body-color, transparent), transparent);
+}
+.tech-stack-scroller-div::after {
+  right: 0;
+  background: linear-gradient(to left, var(--body-color, transparent), transparent);
+}
+
+.tech-stack-scroller {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: max-content;
+}
+
+.tech-stack-scroller-track {
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
+  animation: techMarquee 30s linear infinite;
+}
+
+.tech-stack-scroller-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes techMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 10px)); /* Move by half the width to seamlessly loop */
+  }
+}
+
+.tech-stack-pill {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 50px; /* Pill shape */
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+  min-width: max-content;
+}
+
+.tech-stack-pill:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.tech-stack-icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.tech-stack-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .tech-stack-main {
+    padding: 50px 5%;
+  }
+
+  .tech-stack-heading {
+    font-size: 32px;
+  }
+
+  .tech-stack-subtitle {
+    font-size: 16px;
+  }
+
+  .tech-stack-scroller-track {
+    gap: 15px;
+    padding-left: 15px;
+  }
+
+  .tech-stack-pill {
+    padding: 10px 20px;
+  }
+
+  .tech-stack-icon {
+    font-size: 20px;
+  }
+  
+  .tech-stack-name {
+    font-size: 14px;
+  }
+}

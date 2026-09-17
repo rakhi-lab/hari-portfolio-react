@@ -1,99 +1,234 @@
 /* ============================================================
-   SERVICES SECTION STYLES
+   PREMIUM 3D SERVICES SECTION — GLASSMORPHISM + THREE.JS
    ============================================================ */
 
+/* ── Section Wrapper ── */
 .services-section-wrap {
   width: 100%;
-  padding: 80px 0 70px 0;
+  padding: 100px 0 90px 0;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  background: linear-gradient(165deg, var(--services-bg-start) 0%, var(--services-bg-end) 100%);
+  min-height: 100vh;
 }
 
+/* ── Three.js Canvas Background ── */
+.services-3d-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Content Layer (above canvas) ── */
 .services-container {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 24px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 2;
 }
 
-/* 4-Column Grid */
-.services-grid-4 {
+/* ── 3x3 Card Grid ── */
+.services-grid-3d {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  margin-top: 45px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 50px;
 }
 
-/* Individual Card */
-.service-box-item {
-  text-align: center;
-  padding: 40px 24px;
-  border-radius: 8px;
+/* ── Individual Service Card — Glassmorphism ── */
+.service-card-3d {
+  position: relative;
+  min-height: 360px;
+  padding: 32px 28px 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Subtle gradient glow behind card on hover */
+.service-card-3d::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent 30%, rgba(167, 139, 250, 0.3) 50%, transparent 70%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-card-3d:hover::before {
+  opacity: 1;
+}
+
+.service-card-3d:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 20px 60px var(--services-card-shadow),
+    0 8px 24px rgba(15, 23, 42, 0.08);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* ── Icon Circle ── */
+.service-card-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 230px;
-  transition: all 0.35s ease-in-out;
-  cursor: pointer;
+  margin-bottom: 24px;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.18);
 }
 
-.service-box-item:hover {
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14) !important;
+.service-card-3d:hover .service-card-icon-wrap {
+  transform: scale(1.1) rotate(-3deg);
 }
 
-/* Icon */
-.service-box-icon {
-  font-size: 72px;
-  line-height: 1;
-  margin-bottom: 22px;
-  color: #3498db;
-  transition: transform 0.35s ease-in-out;
+.service-card-icon-wrap i {
+  font-size: 28px;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 
-.service-box-item:hover .service-box-icon {
-  transform: scale(1.1);
+/* ── Card Content ── */
+.service-card-title {
+  font-family: 'Inter', 'Google Sans Bold', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--services-text);
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+  max-width: 240px;
 }
 
-/* Title / Description */
-.service-box-title {
-  font-family: var(--font-sans, "Google Sans Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
-  font-size: 19px;
-  font-weight: 600;
-  line-height: 1.4;
+.service-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--services-subtitle);
   margin: 0;
-  padding: 0 8px;
-  text-align: center;
+  line-height: 1.6;
+  max-width: 260px;
 }
 
-/* Responsive */
+/* ── Card Number Badge ── */
+.service-card-number {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: 72px;
+  font-weight: 800;
+  font-family: 'Fraunces', serif;
+  color: rgba(15, 23, 42, 0.06);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  transition: color 0.4s ease;
+}
+
+.service-card-3d:hover .service-card-number {
+  color: rgba(99, 102, 241, 0.09);
+}
+
+/* ── Arrow Icon ── */
+.service-card-arrow {
+  margin-top: 24px;
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6d5efc;
+  font-size: 16px;
+  background: rgba(99, 102, 241, 0.08);
+  transition: all 0.35s ease;
+}
+
+.service-card-3d:hover .service-card-arrow {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.25);
+  color: #4f46e5;
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
 @media (max-width: 1024px) {
-  .services-grid-4 {
+  .services-grid-3d {
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 20px;
   }
-  .service-box-icon {
-    font-size: 64px;
-  }
-  .service-box-title {
-    font-size: 18px;
+
+  .service-card-3d {
+    padding: 30px 24px 28px;
   }
 }
 
 @media (max-width: 600px) {
-  .services-grid-4 {
+  .services-section-wrap {
+    padding: 70px 0 60px;
+  }
+
+  .services-grid-3d {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
-  .service-box-item {
-    padding: 32px 20px;
+
+  .service-card-3d {
+    padding: 28px 22px 24px;
+    border-radius: 16px;
   }
-  .service-box-icon {
-    font-size: 56px;
+
+  .service-card-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
     margin-bottom: 16px;
   }
-  .service-box-title {
-    font-size: 17px;
+
+  .service-card-icon-wrap i {
+    font-size: 24px;
+  }
+
+  .service-card-title {
+    font-size: 16px;
+  }
+
+  .service-card-desc {
+    font-size: 13px;
+  }
+
+  .service-card-number {
+    font-size: 40px;
   }
 }

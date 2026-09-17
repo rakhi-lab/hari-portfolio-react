@@ -112,7 +112,7 @@ export default function AboutMe(props) {
         {/* Left: Image */}
         <Reveal direction="right" delay={0.1}>
           <div className="about-image-column">
-            <div className="about-image-wrapper">
+            <div className="about-image-wrapper image-side-left">
               <div className="image-bg-shape" />
               <motion.img
                 alt="Hari Shankar Profile"

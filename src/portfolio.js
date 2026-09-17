@@ -275,7 +275,47 @@ const skills = {
   ],
 };
 
+const techStack = {
+  viewSkillBars: true, //Set it to true to show Proficiency Section
+  title: "Our Technology Stack and Platforms",
+  subTitle: "Over 1,000 experts with 24+ years of experience in over 50 cutting-edge technologies.",
+  experience: [
+    {
+      Stack: "Frontend",
+      progressPercentage: "90%",
+    },
+    {
+      Stack: "Backend",
+      progressPercentage: "70%",
+    },
+    {
+      Stack: "Programming",
+      progressPercentage: "60%",
+    },
+  ],
+  display: true, //Set this to true to display tech stack section
+  technologies: [
+    { name: "React", iconName: "simple-icons:react", color: "#61DAFB" },
+    { name: "NodeJS", iconName: "simple-icons:node-dot-js", color: "#339933" },
+    { name: "JavaScript", iconName: "simple-icons:javascript", color: "#F7DF1E" },
+    { name: "Angular", iconName: "simple-icons:angular", color: "#DD0031" },
+    { name: "PHP", iconName: "simple-icons:php", color: "#777BB4" },
+    { name: "Laravel", iconName: "simple-icons:laravel", color: "#FF2D20" },
+    { name: "WordPress", iconName: "simple-icons:wordpress", color: "#21759B" },
+    { name: "MySQL", iconName: "simple-icons:mysql", color: "#4479A1" },
+    { name: "AWS", iconName: "simple-icons:amazonaws", color: "#232F3E" },
+    { name: "Docker", iconName: "simple-icons:docker", color: "#2496ED" },
+    { name: "Git", iconName: "simple-icons:git", color: "#F05032" },
+    { name: "Flutter", iconName: "simple-icons:flutter", color: "#02569B" },
+    { name: "Figma", iconName: "simple-icons:figma", color: "#F24E1E" },
+    { name: "Swift", iconName: "simple-icons:swift", color: "#FA7343" },
+    { name: "Go Lang", iconName: "simple-icons:go", color: "#00ADD8" },
+    { name: "Python", iconName: "simple-icons:python", color: "#3776AB" }
+  ]
+};
+
 // Education Page
+
 
 const degrees = {
   degrees: [
@@ -426,6 +466,7 @@ export {
   greeting,
   socialMediaLinks,
   skills,
+  techStack,
   degrees,
   certifications,
   experience,

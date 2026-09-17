@@ -185,6 +185,25 @@
 .about-image-wrapper {
   position: relative;
   display: inline-block;
+  width: 320px;
+  height: 420px;
+  overflow: hidden;
+  background: #edf6ff;
+}
+
+/* Utility: image side decides which top corner is rounded */
+.about-image-wrapper.image-side-left {
+  border-top-left-radius: 0;
+  border-top-right-radius: 32px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.about-image-wrapper.image-side-right {
+  border-top-left-radius: 32px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .image-bg-shape {
@@ -201,8 +220,11 @@
 
 .about-profile-image {
   width: 100%;
-  max-width: 320px;
-  border-radius: 20px 80px 20px 20px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  border-radius: inherit;
   box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2);
   border: 6px solid white;
 }

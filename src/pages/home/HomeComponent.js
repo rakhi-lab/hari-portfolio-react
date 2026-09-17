@@ -7,6 +7,7 @@ import EducationSection from "../../containers/education/EducationSection";
 import ProcessSection from "../../containers/process/ProcessSection";
 import ServicesSection from "../../containers/services/ServicesSection";
 import PortfolioSection from "../../containers/portfolio/PortfolioSection";
+import TechStackSection from "../../containers/techStack/TechStackSection";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 
@@ -31,6 +32,7 @@ class Home extends Component {
         <Greeting theme={this.props.theme} />
         <AboutMe theme={this.props.theme} />
         <Skills theme={this.props.theme} />
+        <TechStackSection theme={this.props.theme} />
         <ServicesSection theme={this.props.theme} />
         <PortfolioSection theme={this.props.theme} />
         <ProcessSection theme={this.props.theme} />
