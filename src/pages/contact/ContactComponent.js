@@ -107,7 +107,7 @@ class Contact extends Component {
                   <a
                     href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(addressSection.subtitle)}`}
                     target="_blank"
-                    rel="onopen northerner"
+                    rel="noopener noreferrer"
                     className="premium-contact-card map-card"
                     style={{ background: theme.name === "dark" ? "#1e2125" : "#ffffff", borderColor: theme.name === "dark" ? "#2d3136" : "rgba(226, 232, 240, 0.8)" }}
                   >

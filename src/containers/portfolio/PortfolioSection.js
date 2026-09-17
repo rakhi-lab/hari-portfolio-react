@@ -202,7 +202,7 @@ export default function PortfolioSection({ theme }) {
   const handleCardMouseMove = useCallback((e, cardEl) => {
     if (!cardEl) return;
     const rect = cardEl.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    // const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
     const currentTransform = cardEl.style.transform || "";
     const base = currentTransform.replace(/rotateX\([^)]*\)/g, "");
