@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { Link, useLocation } from "react-router-dom";
-import { greeting, settings } from "../../portfolio.js";
+import { settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
 import { motion, AnimatePresence } from "framer-motion";
 

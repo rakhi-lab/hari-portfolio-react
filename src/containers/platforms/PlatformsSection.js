@@ -1,6 +1,6 @@
 import React from "react";
 import "./PlatformsSection.css";
-import { Fade } from "react-reveal";
+
 import { platformsData } from "../../portfolio";
 import SectionHeader from "../../components/sectionHeader/SectionHeader";
 
