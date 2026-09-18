@@ -99,7 +99,10 @@ export default function Header() {
               whileHover={{ rotate: -10 }}
               transition={{ type: "spring", stiffness: 400 }}
             >{"<"}</motion.span>
-            <span className="pf-logo__name">{greeting.logo_name}</span>
+            <span className="pf-logo__name">
+              <span className="pf-logo__name-first">Hari</span>
+              <span className="pf-logo__name-last">Shankar</span>
+            </span>
             <motion.span
               className="pf-logo__bracket"
               whileHover={{ rotate: 10 }}

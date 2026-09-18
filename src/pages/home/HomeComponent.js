@@ -8,10 +8,11 @@ import ProcessSection from "../../containers/process/ProcessSection";
 import ServicesSection from "../../containers/services/ServicesSection";
 import PortfolioSection from "../../containers/portfolio/PortfolioSection";
 import TechStackSection from "../../containers/techStack/TechStackSection";
+import PlatformsSection from "../../containers/platforms/PlatformsSection";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 
-
+// Trigger recompile
 class Home extends Component {
   componentDidMount() {
     if (window.location.hash) {
@@ -33,14 +34,13 @@ class Home extends Component {
         <AboutMe theme={this.props.theme} />
         <Skills theme={this.props.theme} />
         <TechStackSection theme={this.props.theme} />
+        <PlatformsSection theme={this.props.theme} />
         <ServicesSection theme={this.props.theme} />
         <PortfolioSection theme={this.props.theme} />
         <ProcessSection theme={this.props.theme} />
         <EducationSection theme={this.props.theme} />
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
-    
-
       </div>
     );
   }

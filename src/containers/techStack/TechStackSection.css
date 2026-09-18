@@ -1,149 +1,210 @@
-/* Premium Tech Stack Section */
-.tech-stack-main {
-  width: 100%;
-  padding: 60px 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden; /* Prevent horizontal scrollbar on body */
-}
+/* ============================================================
+   3D ROTATING TECHNOLOGY PLATFORM
+   ============================================================ */
 
-.tech-stack-header-div {
-  margin-bottom: 50px;
-}
-
-.tech-stack-title {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  text-transform: capitalize;
-}
-
-.tech-stack-heading {
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.tech-stack-subtitle {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Scroller Container */
-.tech-stack-scroller-div {
-  width: 100vw;
-  max-width: 100%;
+/* ── Section ── */
+.tech3d-section {
+  /* background: white; */
+  /* padding: 100px 0 140px; */
   overflow: hidden;
-  padding: 20px 0;
   position: relative;
 }
 
-/* Optional fading edges for the scroller */
-.tech-stack-scroller-div::before,
-.tech-stack-scroller-div::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 150px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-.tech-stack-scroller-div::before {
-  left: 0;
-  background: linear-gradient(to right, var(--body-color, transparent), transparent);
-}
-.tech-stack-scroller-div::after {
-  right: 0;
-  background: linear-gradient(to left, var(--body-color, transparent), transparent);
+/* ── Header ── */
+.tech3d-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
 }
 
-.tech-stack-scroller {
+/* ── 3D Scene ── */
+.tech3d-scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  perspective: 1200px;
+  perspective-origin: 50% 40%;
+  cursor: default;
+}
+
+/* ── Platform Wrapper (this rotates) ── */
+.tech3d-platform-wrapper {
+  position: relative;
+  width: 650px;
+  height: 455px;
+  transform-style: preserve-3d;
+  /* Controlled by JS CSS variables */
+  transform: rotateX(var(--rotX, -10deg)) rotateY(var(--rotY, 0deg));
+}
+
+/* ============================================================
+   BASE PLATFORM (6-sided 3D box)
+   ============================================================ */
+.tech3d-base {
+  position: absolute;
+  width: 650px;
+  height: 455px;
+  transform-style: preserve-3d;
+  /* Center the base */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Top face */
+.tech3d-base-top {
+  position: absolute;
+  width: 650px;
+  height: 455px;
+  background: linear-gradient(135deg, #111827 0%, #0f172a 60%, #111827 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 20px;
+  transform: translateZ(15px);
+  box-shadow:
+    inset 0 0 60px rgba(56, 189, 248, 0.05),
+    0 30px 60px -10px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(56, 189, 248, 0.1);
+}
+
+/* Glow lines on the top surface */
+.tech3d-base-glow-h {
+  position: absolute;
+  width: 364px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(16px);
+  box-shadow: 0 0 15px #38bdf8;
+  opacity: 0.6;
+}
+
+.tech3d-base-glow-v {
+  position: absolute;
+  width: 1.5px;
+  height: 260px;
+  background: linear-gradient(180deg, transparent, #38bdf8, transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(16px);
+  box-shadow: 0 0 15px #38bdf8;
+  opacity: 0.6;
+}
+
+/* ============================================================
+   TECHNOLOGY BLOCKS (floating above the base)
+   ============================================================ */
+.tech3d-block {
+  position: absolute;
+  width: 202px;
+  height: 117px;
+  /* Center blocks relative to platform center */
+  left: 50%;
+  top: 50%;
+  margin-left: -101px;
+  margin-top: -58px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 14px;
+  padding: 18px 21px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: max-content;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.15), 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease;
+  /* Will-change for GPU acceleration */
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
-.tech-stack-scroller-track {
-  display: flex;
-  gap: 20px;
-  padding-left: 20px;
-  animation: techMarquee 30s linear infinite;
+.tech3d-block:hover {
+  border-color: rgba(56, 189, 248, 0.7);
 }
 
-.tech-stack-scroller-track:hover {
-  animation-play-state: paused;
+/* Accent bar at the top of each block */
+.tech3d-block-accent {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  opacity: 0.8;
 }
 
-@keyframes techMarquee {
-  0% {
-    transform: translateX(0);
+/* Small glow dot */
+.tech3d-block-glow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 12px;
+  right: 12px;
+  opacity: 0.9;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.tech3d-block-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 4px;
+  letter-spacing: 0.5px;
+}
+
+.tech3d-block-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .tech3d-scene {
+    height: 500px;
+    perspective: 1000px;
   }
-  100% {
-    transform: translateX(calc(-50% - 10px)); /* Move by half the width to seamlessly loop */
+
+  .tech3d-platform-wrapper {
+    transform: rotateX(var(--rotX, -10deg)) rotateY(var(--rotY, 0deg)) scale(0.8);
   }
 }
 
-.tech-stack-pill {
-  display: flex;
-  align-items: center;
-  padding: 12px 24px;
-  border-radius: 50px; /* Pill shape */
-  transition: all 0.3s ease-in-out;
-  cursor: default;
-  min-width: max-content;
-}
-
-.tech-stack-pill:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.tech-stack-icon {
-  font-size: 24px;
-  margin-right: 12px;
-}
-
-.tech-stack-name {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-  .tech-stack-main {
-    padding: 50px 5%;
+  .tech3d-section {
+    padding: 60px 0 100px;
   }
 
-  .tech-stack-heading {
-    font-size: 32px;
+  .tech3d-scene {
+    height: 450px;
+    perspective: 900px;
   }
 
-  .tech-stack-subtitle {
-    font-size: 16px;
+  .tech3d-platform-wrapper {
+    transform: rotateX(var(--rotX, -10deg)) rotateY(var(--rotY, 0deg)) scale(0.6);
   }
 
-  .tech-stack-scroller-track {
-    gap: 15px;
-    padding-left: 15px;
+  .tech3d-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech3d-scene {
+    height: 380px;
+    perspective: 800px;
   }
 
-  .tech-stack-pill {
-    padding: 10px 20px;
-  }
-
-  .tech-stack-icon {
-    font-size: 20px;
-  }
-  
-  .tech-stack-name {
-    font-size: 14px;
+  .tech3d-platform-wrapper {
+    transform: rotateX(var(--rotX, -10deg)) rotateY(var(--rotY, 0deg)) scale(0.45);
   }
 }

@@ -7,9 +7,9 @@ export default function SocialMedia(props) {
   return (
     <motion.div
       className="pf-social"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       {socialMediaLinks.map((media, i) => (
         <motion.a
@@ -23,14 +23,17 @@ export default function SocialMedia(props) {
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            delay: 0.08 * i,
+            delay: 0.6 + 0.08 * i,
             duration: 0.4,
             type: "spring",
             stiffness: 280,
             damping: 16,
           }}
-          whileHover={{ scale: 1.18, y: -3 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ 
+            scale: 1.15,
+            y: -3
+          }}
+          whileTap={{ scale: 0.95 }}
           title={media.name}
         >
           <i className={`fa-brands ${media.fontAwesomeIcon}`} />
