@@ -26,39 +26,6 @@
   pointer-events: none;
 }
 
-/* Animated Glowing Orbs */
-.platforms-orb-1, .platforms-orb-2 {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.6;
-  animation: floatOrb 12s ease-in-out infinite alternate;
-}
-
-.platforms-orb-1 {
-  width: 400px;
-  height: 400px;
-  background: #00c8ff;
-  top: -100px;
-  left: -100px;
-}
-
-.platforms-orb-2 {
-  width: 500px;
-  height: 500px;
-  background: #1d72fe;
-  bottom: -200px;
-  right: -100px;
-  animation-delay: -6s;
-}
-
-@keyframes floatOrb {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(60px, 60px) scale(1.1); }
-}
-
 .platforms-header-div {
   text-align: center;
   max-width: 800px;

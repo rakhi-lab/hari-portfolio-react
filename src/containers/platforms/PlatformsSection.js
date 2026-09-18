@@ -29,8 +29,7 @@ export default function PlatformsSection({ theme }) {
   return (
     <div className="platforms-main" id="platforms">
       {/* Background Orbs */}
-      {/* <div className="platforms-orb-1"></div>
-      <div className="platforms-orb-2"></div> */}
+  
 
       <div className="platforms-header-div" style={{ position: 'relative', zIndex: 1 }}>
         <SectionHeader

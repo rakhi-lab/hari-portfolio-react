@@ -40,7 +40,7 @@ const aboutMe = {
   subtitle: "A Passionate Developer | A Problem Solver | A Lifelong Learner",
   quote: "\"Keep Learning, Keep Building\"",
   description:
-    "I'm Hari Maliya, CEO & Founder of Intechno Software Private Limited, with a Bachelor's degree in Information Technology and over 16 years of experience in web and software development. Since 2010, I’ve been passionate about building web applications, SaaS products, exploring emerging technologies, and creating practical digital solutions for businesses.\n\nWordPress has been a major part of my professional journey. I have developed 100+ WordPress plugins and themes for clients in India and across international markets. My technical expertise includes PHP, OOP, Laravel, CodeIgniter, MySQL, JavaScript, jQuery, AngularJS, HTML5, CSS3, Bootstrap, REST APIs, Web Services, Payment Gateway Integration, Git, and LAMP-stack development.\n\nBeyond development, I have experience in project planning and management, customer relationship management (CRM), marketing, training, business strategy, and team collaboration. As a founder, I enjoy turning ideas into scalable products, solving real-world business challenges, and continuously improving the way technology is designed and delivered.\n\nWhen I'm not working on products or exploring new technologies, I enjoy learning, reading, watching movies, discovering new ideas, and spending quality time with my family.",
+    "I'm Hari Maliya, CEO & Founder of Intechno Software Private Limited, with a Bachelor's degree in Information Technology and over 16 years of experience in web and software development. Since 2010, I’ve been passionate about building web applications, SaaS products, exploring emerging technologies, and creating practical digital solutions for businesses.\n\nWordPress has been a major part of my professional journey. I have developed 500+ WordPress plugins and themes for clients in India and across international markets. My technical expertise includes PHP, OOP, Laravel, CodeIgniter, MySQL, JavaScript, jQuery, AngularJS, HTML5, CSS3, Bootstrap, REST APIs, Web Services, Payment Gateway Integration, Git, and LAMP-stack development.\n\nBeyond development, I have experience in project planning and management, customer relationship management (CRM), marketing, training, business strategy, and team collaboration. As a founder, I enjoy turning ideas into scalable products, solving real-world business challenges, and continuously improving the way technology is designed and delivered.\n\nWhen I'm not working on products or exploring new technologies, I enjoy learning, reading, watching movies, discovering new ideas, and spending quality time with my family.",
   details: [
     { name: "FULL NAME", value: "HARI SHANKAR MALIYA", icon: "fas fa-user" },
     { name: "BIRTHDAY", value: "15th August", icon: "far fa-calendar-alt" },
@@ -51,8 +51,8 @@ const aboutMe = {
   ],
   stats: [
     { name: "Years Experience", value: "16+", image: require("./assets/images/3d_briefcase.png"), color: "#1877F2" },
-    { name: "Happy Clients", value: "100+", image: require("./assets/images/3d_people.png"), color: "#00A95F" },
-    { name: "Projects Completed", value: "150+", image: require("./assets/images/3d_clipboard.png"), color: "#F7931E" },
+    { name: "Happy Clients", value: "70K+", image: require("./assets/images/3d_people.png"), color: "#00A95F" },
+    { name: "Projects Completed", value: "500+", image: require("./assets/images/3d_clipboard.png"), color: "#F7931E" },
     { name: "Plugins & Themes", value: "100+", image: require("./assets/images/3d_trophy.png"), color: "#9D50BB" },
   ],
 };
@@ -215,13 +215,13 @@ const skills = {
             color: "#F7DF1E",
           },
         },
-        // {
-        //   skillName: "Flutter",
-        //   fontAwesomeClassname: "simple-icons:flutter",
-        //   style: {
-        //     color: "#02569B",
-        //   },
-        // },
+        {
+          skillName: "Flutter",
+          fontAwesomeClassname: "simple-icons:flutter",
+          style: {
+            color: "#02569B",
+          },
+        },
         {
           skillName: "PHP",
           fontAwesomeClassname: "simple-icons:php",
