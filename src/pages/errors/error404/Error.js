@@ -20,14 +20,12 @@ export default class Error extends Component {
             <Link
               className="main-button"
               to="/home"
-              style={{
-                color: theme.body,
-                backgroundColor: theme.text,
-                border: `solid 1px ${theme.text}`,
-                display: "inline-flex",
-              }}
             >
-              Go Home
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>Go Home</span>
             </Link>
           </Fade>
         </div>

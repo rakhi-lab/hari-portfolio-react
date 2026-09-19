@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./PortfolioSection.css";
 import SectionHeader from "../../components/sectionHeader/SectionHeader";
+import Button from "../../components/button/Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -170,15 +171,24 @@ export default function PortfolioSection({ theme }) {
   useEffect(() => {
     if (!sectionRef.current || !viewportRef.current) return;
 
+    const setSectionHeight = () => {
+      const viewportHeight = window.innerHeight;
+      const scrollSpace = Math.max(viewportHeight * 5.5, 5200);
+      sectionRef.current.style.height = `${scrollSpace}px`;
+      viewportRef.current.style.height = `${viewportHeight}px`;
+    };
+
+    setSectionHeight();
     updateCards(0);
 
     const trigger = ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top top",
-      end: () => `+=${window.innerHeight * 3.5}`,
+      end: () => `+=${Math.max(window.innerHeight * 5.5, 5200)}`,
       pin: viewportRef.current,
+      pinSpacing: false,
       scrub: 0.6,
-      anticipatePin: 1,
+      invalidateOnRefresh: true,
       onUpdate: (self) => {
         scrollProgressRef.current = self.progress;
         setProgress(self.progress);
@@ -187,6 +197,7 @@ export default function PortfolioSection({ theme }) {
     });
 
     const onResize = () => {
+      setSectionHeight();
       trigger.refresh();
       updateCards(scrollProgressRef.current);
     };
@@ -195,6 +206,8 @@ export default function PortfolioSection({ theme }) {
     return () => {
       trigger.kill();
       window.removeEventListener("resize", onResize);
+      sectionRef.current.style.height = "";
+      viewportRef.current.style.height = "";
     };
   }, [updateCards]);
 
@@ -229,10 +242,10 @@ export default function PortfolioSection({ theme }) {
             <SectionHeader
               overline="PORTFOLIO"
               title="My "
-              highlight="Portfolio"
+              highlight="Projects"
               align="center"
               theme={theme}
-             
+
             />
           </div>
 
@@ -261,28 +274,6 @@ export default function PortfolioSection({ theme }) {
                         {item.title}
                       </a>
                     </h3>
-                    <div className="portfolio-3d-card-actions">
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="portfolio-3d-card-visit"
-                      >
-                        Visit Site ↗
-                      </a>
-                      <button
-                        type="button"
-                        className="portfolio-3d-card-zoom"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setLightboxImage({ src: imgSrc, title: item.title, link: item.link });
-                        }}
-                        title={`Zoom ${item.title}`}
-                        aria-label={`Zoom ${item.title}`}
-                      >
-                        <i className="fa-solid fa-plus"></i>
-                      </button>
-                    </div>
                   </div>
                 </div>
               );
@@ -305,22 +296,26 @@ export default function PortfolioSection({ theme }) {
 
             {progress < 0.05 && (
               <div className="portfolio-3d-scroll-hint">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 5v14M19 12l-7 7-7-7" />
-                </svg>
                 Scroll to explore
               </div>
             )}
 
+            <div className="portfolio-3d-dots" aria-label="Portfolio navigation">
+              {PORTFOLIO_ITEMS.map((item, index) => (
+                <span
+                  key={item.id}
+                  className={`portfolio-3d-dot ${index === currentIndex ? "active" : ""}`}
+                  aria-hidden="true"
+                />
+              ))}
+            </div>
+
             <div className="portfolio-more-wrap">
-              <a
-                className="portfolio_more btn"
+              <Button
+                text="More Portfolio"
                 href="https://weblizar.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                More Portfolio
-              </a>
+                newTab={true}
+              />
             </div>
           </div>
         </div>
@@ -335,7 +330,7 @@ export default function PortfolioSection({ theme }) {
               onClick={() => setLightboxImage(null)}
               aria-label="Close lightbox"
             >
-              ✕
+              Close
             </button>
             <img src={lightboxImage.src} alt={lightboxImage.title} className="portfolio-lightbox-img" />
             <div className="portfolio-lightbox-caption">

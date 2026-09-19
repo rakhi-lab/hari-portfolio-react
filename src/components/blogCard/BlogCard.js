@@ -1,5 +1,6 @@
 import React from "react";
 import "./BlogCard.css";
+import Button from "../button/Button";
 
 export default function BlogCard({ blog }) {
   return (
@@ -11,9 +12,7 @@ export default function BlogCard({ blog }) {
           <p className="blog-card-subtitle">{blog.description}</p>
 
           <div>
-            <a href={blog.url} target="_" class="button">
-              Read More
-            </a>
+            <Button text="Read More" href={blog.url} newTab={true} />
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./TalkCard.css";
+import Button from "../button/Button";
 
 export default function TalkCard({ talkDetails }) {
   return (
@@ -11,12 +12,8 @@ export default function TalkCard({ talkDetails }) {
           <p className="talk-card-subtitle">{talkDetails.subtitle}</p>
 
           <div className="card-footer-button-div">
-            <a href={talkDetails.slides_url} target="_" class="talk-button">
-              Slides
-            </a>
-            <a href={talkDetails.event_url} target="_" class="talk-button">
-              Event
-            </a>
+            <Button text="Slides" href={talkDetails.slides_url} newTab={true} />
+            <Button text="Event" href={talkDetails.event_url} newTab={true} />
           </div>
         </div>
       </div>

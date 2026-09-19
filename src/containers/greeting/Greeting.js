@@ -3,6 +3,7 @@ import "./Greeting.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { greeting } from "../../portfolio";
 import { motion } from "framer-motion";
+import Button from "../../components/button/Button";
 
 /* ─── Animation Variants ──────────────────────────────────── */
 const containerVariants = {
@@ -98,16 +99,12 @@ export default function Greeting(props) {
 
           {/* CTA Buttons */}
           <motion.div className="hero-cta" variants={itemVariants}>
-            <a href="#contact" className="hero-btn hero-btn--primary">
-              Contact Me <span className="hero-btn__arrow">→</span>
-            </a>
-            <a href="#Portfolio" className="hero-btn hero-btn--transparent">
-              Portfolio <span className="hero-btn__arrow">→</span>
-            </a>
+            <Button text="Contact Me" href="#contact" />
+            <Button text="Portfolio" href="#Portfolio" />
           </motion.div>
 
           {/* Watch My Intro element */}
-          <motion.div
+          {/* <motion.div
             className="hero-intro"
             variants={itemVariants}
           >
@@ -116,13 +113,13 @@ export default function Greeting(props) {
             </div>
             <div className="hero-intro__text-wrap">
               <svg className="hero-intro__arrow" viewBox="0 0 50 50" width="40" height="40">
-                <path d="M 40,10 C 20,10 10,20 10,40 M 10,40 L 0,30 M 10,40 L 20,30" fill="none" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 0,25 C 20,25 40,25 40,40 M 40,40 L 30,35 M 40,40 L 50,35" fill="none" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <div className="hero-intro__text">
                 Watch<br />My Intro
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* ── Right: Profile Image & Graphics ── */}
