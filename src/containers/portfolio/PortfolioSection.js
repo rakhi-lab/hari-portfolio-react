@@ -169,23 +169,26 @@ export default function PortfolioSection({ theme }) {
 
   /* ─── GSAP ScrollTrigger ─── */
   useEffect(() => {
-    if (!sectionRef.current || !viewportRef.current) return;
+    const sectionNode = sectionRef.current;
+    const viewportNode = viewportRef.current;
+
+    if (!sectionNode || !viewportNode) return;
 
     const setSectionHeight = () => {
       const viewportHeight = window.innerHeight;
       const scrollSpace = Math.max(viewportHeight * 5.5, 5200);
-      sectionRef.current.style.height = `${scrollSpace}px`;
-      viewportRef.current.style.height = `${viewportHeight}px`;
+      sectionNode.style.height = `${scrollSpace}px`;
+      viewportNode.style.height = `${viewportHeight}px`;
     };
 
     setSectionHeight();
     updateCards(0);
 
     const trigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
+      trigger: sectionNode,
       start: "top top",
       end: () => `+=${Math.max(window.innerHeight * 5.5, 5200)}`,
-      pin: viewportRef.current,
+      pin: viewportNode,
       pinSpacing: false,
       scrub: 0.6,
       invalidateOnRefresh: true,
@@ -206,8 +209,8 @@ export default function PortfolioSection({ theme }) {
     return () => {
       trigger.kill();
       window.removeEventListener("resize", onResize);
-      sectionRef.current.style.height = "";
-      viewportRef.current.style.height = "";
+      sectionNode.style.height = "";
+      viewportNode.style.height = "";
     };
   }, [updateCards]);
 

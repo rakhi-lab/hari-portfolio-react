@@ -76,7 +76,7 @@ export default function EducationSection() {
               Exploring new technologies and methodologies — a continuous journey from technical foundation to business leadership.
             </p>
           </div>
-
+    
           <div className="edu-quote-block">
             <p>
               Education is not just about degrees, but about building the skills, mindset and curiosity to create a better tomorrow.
